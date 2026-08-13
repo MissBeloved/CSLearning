@@ -9,3 +9,13 @@
 - What is a shell?
 - What is a terminal?
 - Explain the Linux filesystem hierarchy.
+- What is an absolute path?
+- What is a relative path?
+- Difference between `.` and `..`?
+- What does `~` represent?
+- Why do Linux administrators often use terminal editors like `nano` or `vim`?
+- What does `>` do?
+- What does `>>` do?
+- What is a pipe?
+- What does `*` match?
+- What does `?` match?

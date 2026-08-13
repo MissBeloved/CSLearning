@@ -34,3 +34,9 @@ Since linux is free and open source, many linux distributions were developed fro
 Servers don't need fancy graphics since GUI uses cpu and ram, it increases the attack surface and need more maintenance
 - Why Linux is preferred in cloud environments
 		The technologies in cloud mostly runs on linux. since linux is used in every technology of cloud environment linux is preferred around the world
+
+**Absolute and relative path**
+Absolute path: the path starts form root directory. it always points to the same place
+- example: /home/missbeloved/CSjourney/linux/day1.txt  [this absolute path always points to the day1.txt]
+Relative path: the path starts from current place. 
+- example: if we are currnetly in linux then ../notex/ is the relative path to go to notes folder

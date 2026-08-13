@@ -137,3 +137,52 @@ important files
 - tree is the software have to be installed before by using sudo
 - 'tree' command helps to print the structure of the current directory which we are in present
 - 'tree directoryname' helps to print the directory structure. if we use directoryname then we have to be on above the top level of the current directory
+
+**head** 
+- head filename.ext [display first 10 lines of data by default]
+- head -n filename.ext [display n number of lines from the starting of the file. n can be any positive number]
+
+**tail** 
+- tail filename.ext [displays the last 10 lines of data by default]
+- tail -n filename.ext [display n number of lines from last.]
+
+**less** [opens a scrollable view]
+- less filename.ext
+- controls:
+	- ↑ / ↓: move line by line
+	- Space: next page
+	- b: previous page
+	- q: quit
+
+**more** 
+- more filename.ext
+- q key is used to quit
+- space is used to display the next page
+- more it only one side view. where less allows two way navigation
+- less is preferred over more because it allows both forward and backward navigation.
+
+**nano** [creates a file]
+- nano filename.txt
+	- Save: Ctrl + O
+	- Confirm: Enter
+	- Exit: Ctrl + X
+
+**Wildcards**
+- * [matches zero or more characters]
+	ls *.txt [displays all txt files]
+	rm *.log [removes all log files]
+
+- ? [matces exactly one character]
+	ls file?.ext [display all the files with file_ last character differ]
+	ls file??.ext [display all the files with last 2 char differ]
+
+**Redirection & pipes**
+- > [overrides]
+	echo "linux">file.txt [replace the content]
+- >> [appends]
+	echo "Linux">>file.txt [add at last]
+	NOTE: > and >> are output redirections
+- | [sends the output left command to right command]
+	Examples: history | less
+	ls -l | less
+	cat test.txt | less
