@@ -1,0 +1,11 @@
+- What is Linux?
+- What is Ubuntu?
+- What is the Linux kernel?
+- What is the difference between a kernel and a Linux distribution?
+- What is the difference between Linux and Windows?
+- Why do cloud providers mostly use Linux?
+- What is the difference between CLI and GUI?
+- Why do most servers not have a GUI?
+- What is a shell?
+- What is a terminal?
+- Explain the Linux filesystem hierarchy.
