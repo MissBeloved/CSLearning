@@ -19,3 +19,13 @@
 - What is a pipe?
 - What does `*` match?
 - What does `?` match?
+- What is a Linux user?
+- What is a Linux group?
+- What is the difference between a user and a group?
+- Explain the rwx permission model.
+- What do the three permission sets (owner, group, others) represent?
+- What is the difference between chmod and chown?
+- What is sudo, and why is it used?
+- Why is logging in as root discouraged?
+- Explain the Principle of Least Privilege with an example.
+- Why are service accounts important?

@@ -186,3 +186,85 @@ important files
 	Examples: history | less
 	ls -l | less
 	cat test.txt | less
+
+***Check your user***
+- Linux stores all the id numbers in etc/passwd/
+- **whoami** [display current username]
+- **id** [displays uid, gid and groups]
+	- id [display current user id numbers of user id, group id and the groups he was in]
+	- id username [display the userid, group id and groups existed of given username]
+	- uid range (0, root), (1 - 999, System users and service accounts), (1000+, regular human accounts)
+	Note:	System users (daemon,www-data, mysql, nginx, postgres, sshd)
+			To know system user id number [id daemon, id system_user]
+- **groups** [displays all the groups that the user belongs too]
+- **who** [displays all the users that were currently logged in]		
+- **cat /etc/passwd** [displays all the account information]
+- **cat /etc/groups** [displays all the groups] 
+
+***File Permissions***
+- For directory drwxrw-r--  and for normal files -rwxrw-r-- and  l represent symbolic files
+- permission order
+	- (user)(group)(other)
+- permission symbol
+	- r - read [4 in number format]
+	- w - write [2 in number format]
+	- x - execute [1 in number format]
+- Directory permissions
+	- r - read [List the contents of the directory using `ls`]
+	- w - write [create, delete or rename files inside the directory]
+	- x - execute [enter the  directory using cd or access files inside it]
+
+**chmod** [used to change permissions for a file or folder]
+- chmod permissions filename  [change mode]
+- Symbolic method (chmod [who operator permission] file)
+	- + add permission
+	- - remove permission
+	- = set exact permission
+	- Ex1: chmod u+x script.sh [add execute permission to only user]
+	- Ex2: chmod +x script.sh [add execute permission to all]
+- permission category
+	- u - user/owner
+	- g - group
+	- o - other
+	- a - all
+- Numeric method (chmod xyz filename) [where x is user, y is group, z is other]
+	- 0 = ---
+	- 1 = --x
+	- 2 = -w-
+	- 3 = -wx
+	- 4 = r--
+	- 5 = r-x
+	- 6 = rw-
+	- 7 = rwx
+	- Ex: chmod 700 file.txt [where user = rwx, group and others = ---]
+
+***Creating user***
+- sudo adduser username [creates user]
+- id username [to know the user, group ids of the user and groups he was in]
+- sudo userdel username [remove account but keeps their home directory and files]
+- sudo userdel -r username [remove user account and files and directory]
+
+***Creating groups***
+- sudo groupadd groupname [creates new group]
+- getent group groupname [verify the group exists]
+
+
+**chown**
+chown changes the ownership of the file
+- -rw-r--r-- duo developers notes.txt [duo is owner and developer is group]
+- sudo chown new_username_to_set file.txt [change user]
+- sudo chown :new_group_to_set file.txt [change group]
+- sudo chgrp new_group_to_set file.txt
+
+
+**Package Management**
+sudo apt update [run update command]
+- sudo means "super user do" that gives administrator privileges. simply "run as administrator" in windows
+- apt means ubuntu package manager
+- update means refresh package list.
+sudo apt upgrade -y [after sudo apt update command, used to update installed packages]
+- means install updates
+- -y means yes
+sudo app install softwarename -y [install software]
+sudo app remove softwarename -y [remove software]
+- Ex: Tree is a software which is used to show the structure inside the folder visually

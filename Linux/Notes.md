@@ -40,3 +40,33 @@ Absolute path: the path starts form root directory. it always points to the same
 - example: /home/missbeloved/CSjourney/linux/day1.txt  [this absolute path always points to the day1.txt]
 Relative path: the path starts from current place. 
 - example: if we are currnetly in linux then ../notex/ is the relative path to go to notes folder
+
+**Principle of Least Privilege**
+- Give users and applications only the permissions they need.
+- This principle appears everywhere:
+Linux
+AWS IAM
+Kubernetes RBAC
+Databases
+CI/CD pipelines
+
+***Users and Groups***
+**Why do Users Exist?**
+- One username and one password for the entire company doesn't provide security
+- It raises the problems like No accountability, anyone can delete files, No way to know who made changes, security would be impossible.
+- Linux solves this by giving every process and every person an identity.
+
+**What is a user?**
+- A user is an identity recognized by linux
+- users can:
+		- Own files, Run programs, Log in, Have specific permissions
+- Examples:
+		- root - Superuser (administrator).
+		- Your own account.
+		- www-data - Runs web servers.
+		- mysql - Runs database services.
+Expert Insight: Many services create service accounts that are not meant for humans to log in. This limits what those services can access if they're compromised.
+
+**What is a group?**
+- A group is a collection of users who share permissions
+- Instead granting permissions to each single user individually, you can grant them to the group
